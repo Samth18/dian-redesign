@@ -1,6 +1,13 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 export function Header() {
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path ? 'active' : '';
+  };
+
   return (
     <>
       <div className="govbar">
@@ -8,46 +15,44 @@ export function Header() {
       </div>
 
       <header className="header">
-        <a href="/" className="logo-area">
+        <Link to="/" className="logo-area" aria-label="Ir a la página de inicio de la DIAN">
           <div>
             <div className="logo-text">DIAN</div>
             <div className="logo-tagline">Por una Colombia más honesta</div>
           </div>
-        </a>
+        </Link>
         
         <div className="header-right">
-          <div className="access-panel">
-            <span><i className="fas fa-universal-access"></i> Accesibilidad</span>
-            <button className="access-btn" aria-label="Aumentar tamaño de letra">A+</button>
-            <button className="access-btn outline" aria-label="Disminuir tamaño de letra">A-</button>
-            <button className="access-btn outline" aria-label="Cambiar contraste"><i className="fas fa-circle-half-stroke"></i></button>
-          </div>
           <div className="search-box">
-            <i className="fas fa-search"></i>
+            <i className="fas fa-search" aria-hidden="true"></i>
             <input type="text" placeholder="¿Qué trámite necesita?" aria-label="Buscar trámite" />
           </div>
         </div>
       </header>
 
       <nav aria-label="Navegación principal">
-        <a href="#" className="active">Inicio</a>
-        <a href="#">Mis Trámites</a>
-        <a href="#">Impuestos</a>
-        <a href="#">Aduanas</a>
+        <Link to="/" className={isActive('/')}>Inicio</Link>
+        <Link to="/tramites" className={isActive('/tramites')}>Mis Trámites</Link>
+        <Link to="/impuestos" className={isActive('/impuestos')}>Impuestos</Link>
+        <Link to="/aduanas" className={isActive('/aduanas')}>Aduanas</Link>
         <a href="#">Factura Electrónica</a>
         <a href="#">RUT</a>
         <a href="#">Contáctenos</a>
       </nav>
 
-      <div className="breadcrumb" aria-label="Ruta de navegación">
-        <i className="fas fa-house" style={{ fontSize: '11px', color: 'var(--primary-dark)' }}></i>
-        <a href="#">Inicio</a>
-        <span className="sep">›</span>
-        <a href="#">Mis Trámites</a>
-        <span className="sep">›</span>
-        <span className="current">Actualización RUT</span>
-        <span className="wcag-badge"><i className="fas fa-check"></i> WCAG AA</span>
-      </div>
+      {location.pathname !== '/' && (
+        <div className="breadcrumb" aria-label="Ruta de navegación">
+          <i className="fas fa-house" style={{ fontSize: '11px', color: 'var(--primary-dark)' }}></i>
+          <Link to="/">Inicio</Link>
+          <span className="sep">›</span>
+          <span className="current">
+            {location.pathname === '/tramites' && 'Mis Trámites'}
+            {location.pathname === '/impuestos' && 'Impuestos'}
+            {location.pathname === '/aduanas' && 'Aduanas'}
+          </span>
+          <span className="wcag-badge"><i className="fas fa-check"></i> WCAG AAA</span>
+        </div>
+      )}
     </>
   );
 }
