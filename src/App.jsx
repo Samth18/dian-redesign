@@ -9,6 +9,9 @@ import { Home } from './pages/Home';
 import { Impuestos } from './pages/Impuestos';
 import { Aduanas } from './pages/Aduanas';
 import { Tramites } from './pages/Tramites';
+import { FacturaElectronica } from './pages/FacturaElectronica';
+import { RUT } from './pages/RUT';
+import { Contactanos } from './pages/Contactanos';
 
 import './index.css';
 
@@ -24,6 +27,9 @@ function App() {
           <Route path="/impuestos" element={<Impuestos />} />
           <Route path="/aduanas" element={<Aduanas />} />
           <Route path="/tramites" element={<Tramites />} />
+          <Route path="/factura-electronica" element={<FacturaElectronica />} />
+          <Route path="/rut" element={<RUT />} />
+          <Route path="/contactanos" element={<Contactanos />} />
         </Routes>
       </div>
 

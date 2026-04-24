@@ -21,7 +21,7 @@ export function Header() {
             <div className="logo-tagline">Por una Colombia más honesta</div>
           </div>
         </Link>
-        
+
         <div className="header-right">
           <div className="search-box">
             <i className="fas fa-search" aria-hidden="true"></i>
@@ -35,9 +35,9 @@ export function Header() {
         <Link to="/tramites" className={isActive('/tramites')}>Mis Trámites</Link>
         <Link to="/impuestos" className={isActive('/impuestos')}>Impuestos</Link>
         <Link to="/aduanas" className={isActive('/aduanas')}>Aduanas</Link>
-        <a href="#">Factura Electrónica</a>
-        <a href="#">RUT</a>
-        <a href="#">Contáctenos</a>
+        <Link to="/factura-electronica" className={isActive('/factura-electronica')}>Factura Electrónica</Link>
+        <Link to="/rut" className={isActive('/rut')}>RUT</Link>
+        <Link to="/contactanos" className={isActive('/contactanos')}>Contáctenos</Link>
       </nav>
 
       {location.pathname !== '/' && (
@@ -49,6 +49,9 @@ export function Header() {
             {location.pathname === '/tramites' && 'Mis Trámites'}
             {location.pathname === '/impuestos' && 'Impuestos'}
             {location.pathname === '/aduanas' && 'Aduanas'}
+            {location.pathname === '/factura-electronica' && 'Factura Electrónica'}
+            {location.pathname === '/rut' && 'RUT'}
+            {location.pathname === '/contactanos' && 'Contáctenos'}
           </span>
           <span className="wcag-badge"><i className="fas fa-check"></i> WCAG AAA</span>
         </div>
