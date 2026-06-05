@@ -392,18 +392,40 @@ nav a.active { color: var(--secondary-light); }
 }
 .btn-secondary {
   background: transparent;
-  color: white;
+  color: var(--primary-dark);
   font-family: var(--font-sans);
   font-size: 0.8125rem;
   font-weight: 600;
   padding: 11px 22px;
   border-radius: 8px;
-  border: 2px solid rgba(255,255,255,0.5);
+  border: 2px solid var(--primary-dark);
   cursor: pointer;
   transition: all 0.2s;
 }
 .btn-secondary:hover {
+  background: var(--primary-dark);
+  color: white;
+}
+
+/* Dark Mode */
+body.dark-mode .btn-secondary {
+  color: white;
+  border-color: rgba(255,255,255,0.6);
+}
+body.dark-mode .btn-secondary:hover {
   background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+/* High Contrast Mode */
+body.high-contrast .btn-secondary {
+  background: #ffff00;
+  color: #000000;
+  border-color: #ffffff;
+}
+body.high-contrast .btn-secondary:hover {
+  background: #ffffff;
+  color: #000000;
 }
 
 /* FLUJO DE 3 PASOS */
