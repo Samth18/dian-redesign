@@ -1,0 +1,94 @@
+1 - Rediseño Integral del Portal
+Transaccional de la DIAN
+
+Nuestro proyecto aborda el rediseño integral del portal transaccional de la DIAN,
+enfocándonos en la experiencia del usuario. Buscamos mejorar la accesibilidad universal,
+el UX Writing y la arquitectura de información. Este trabajo es la culminación de nuestra
+formación en Ingeniería de Sistemas y Computación. Estamos listos para presentar cómo la
+tecnología puede servir mejor al ciudadano. Ahora, profundicemos en el contexto y la
+problemática que nos llevó a este rediseño.
+2 - Introducción y Contexto Social
+
+El acceso equitativo a los servicios digitales del Estado es fundamental para una
+democracia tecnológica. Hemos observado que los portales gubernamentales, como el de
+la DIAN, a menudo son rígidos y usan un lenguaje técnico que excluye a muchos usuarios.
+Nuestro objetivo es reconfigurar esta experiencia, combinando UX Writing y Accesibilidad
+Universal. Queremos transformar un sistema fiscalizador en una plataforma que realmente
+sirva al ciudadano. Pero antes, veamos las barreras específicas que identificamos.
+3 - Diagnóstico: Barreras Críticas de Acceso
+
+Identificamos barreras críticas que impiden el acceso efectivo al portal de la DIAN. Primero,
+el contraste y color no cumplen los estándares, dificultando la lectura para personas con
+baja visión. Segundo, el lenguaje alienante, lleno de tecnicismos, genera una sobrecarga
+cognitiva. Tercero, la jerarquía semántica deficiente impide el uso adecuado de lectores de
+pantalla. Cuarto, la falta de validación en tiempo real frustra al usuario al descubrir errores
+solo al final. Finalmente, la ausencia de retroalimentación en procesos críticos deja al
+usuario sin saber qué ocurre. Para solucionar esto, implementamos una metodología clara.
+4 - Metodología: Diseño Centrado en el
+Usuario
+
+Nuestra metodología se basa en el Diseño Centrado en el Usuario, siguiendo la norma ISO
+9241-210. Iniciamos con una investigación profunda, modelando arquetipos de usuarios
+expertos y no expertos para entender sus necesidades. Luego, definimos requisitos
+técnicos, como los estándares WCAG 2.1 AA/AAA, e integramos el marco legal de Lenguaje
+Ciudadano. Después, rediseñamos la arquitectura, reescribiendo la microcopia y
+
+simplificando los flujos interactivos. Finalmente, desarrollamos un prototipo funcional en
+React 18 para evaluar la usabilidad real. Esto nos llevó a definir una estrategia de
+comunicación específica.
+5 - Estrategia de Voz y Tono: Lenguaje
+Ciudadano
+
+Desarrollamos una estrategia de voz y tono basada en el Lenguaje Ciudadano. La voz
+institucional es empática, clara, orientadora y humana, priorizando al ciudadano.
+Implementamos una matriz de tono dinámico: educativo para las fases iniciales, con un
+lenguaje amable y explicativo. Y resolutivo para errores críticos, con un tono directo y
+enfocado en la solución. La regla de oro es sustituir el 'qué' legal por el 'cómo' ciudadano.
+Esto es clave para el siguiente paso, donde abordamos el impacto emocional del usuario.
+6 - Storytelling y Arcos Emocionales
+
+Aquí, la clave es entender que el diseño no es solo visual, es emocional. Estamos diseñando
+para el estado emocional del contribuyente, reconociendo su ansiedad y miedo al error.
+Nuestro arco narrativo transforma esa experiencia, guiando al usuario desde la necesidad
+inicial hasta una confirmación exitosa y humanizada. Esta aproximación reduce la
+deserción y la frustración, convirtiendo un proceso temido en uno asistido. Y esto nos lleva
+directamente a los resultados tangibles de esta transformación.
+7 - Resultados: Transformación de Flujos
+Críticos
+
+Ahora, veamos cómo este enfoque se materializa en la transformación de flujos críticos.
+Hemos reconfigurado diez flujos clave, eliminando el lenguaje punitivo que antes generaba
+confusión y miedo. Por ejemplo, un críptico 'Error 504' se convierte en una guía clara y
+tranquilizadora. Esto no es solo un cambio de palabras; es una mejora proyectada en la
+tasa de finalización de tareas y una reducción significativa de la carga cognitiva. Estos
+cambios son posibles gracias a una implementación técnica robusta.
+8 - Implementación Técnica: React 18 y
+Accesibilidad
+
+La implementación técnica es el esqueleto que soporta esta nueva experiencia. Utilizamos
+React 18 y una arquitectura de componentes atómicos para asegurar consistencia y
+escalabilidad. Hemos automatizado la gestión del foco para lectores de pantalla, un detalle
+crucial para la accesibilidad. Además, nuestro Accessibility Provider inyecta estilos
+dinámicos, como alto contraste y fuentes para dislexia, garantizando la inclusión. Todo esto
+se valida con métricas precisas.
+9 - Métricas de Usabilidad y Validación
+
+Para validar nuestro trabajo, nos apoyamos en métricas de usabilidad estándar. Esperamos
+un incremento notable en el System Usability Scale, reflejando una percepción de facilidad
+de uso superior. La Single Ease Question nos permitirá medir la reducción de la dificultad
+en tareas específicas. Esto se traduce en una mayor eficiencia, con trámites que se
+completan más rápido y sin fricciones. Y lo más importante, una validación técnica exitosa
+bajo normativas internacionales de accesibilidad. Todo esto nos lleva a una conclusión
+fundamental.
+10 - Conclusiones: Tecnología al Servicio
+del Ciudadano
+
+En resumen, este proyecto demuestra que la tecnología debe estar al servicio del
+ciudadano. La sinergia entre la ingeniería de software y el diseño de contenido es esencial
+para la inclusión digital. Hemos neutralizado barreras históricas, transformando un sistema
+fiscalizador en una herramienta de asistencia guiada. Este trabajo establece un precedente
+metodológico para la modernización de plataformas públicas. Porque el verdadero éxito de
+un sistema no reside en su complejidad interna, sino en la claridad con la que sirve a las
+personas.
+
+
