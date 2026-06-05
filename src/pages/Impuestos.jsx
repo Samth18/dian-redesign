@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { TaxSimulatorFlow } from '../components/TaxSimulatorFlow';
 import { OnlinePaymentFlow } from '../components/OnlinePaymentFlow';
+import { TaxCalendarFlow } from '../components/TaxCalendarFlow';
+import { RetentionCertificateFlow } from '../components/RetentionCertificateFlow';
 import { Tooltip } from '../components/Form/Tooltip';
 
 export function Impuestos() {
@@ -43,6 +45,28 @@ export function Impuestos() {
     );
   }
 
+  if (action === 'calendar') {
+    return (
+      <main>
+        <div className="section-label">
+          <i className="fas fa-calendar-alt"></i> Calendario Tributario
+        </div>
+        <TaxCalendarFlow onBack={() => handleSetAction(null)} />
+      </main>
+    );
+  }
+
+  if (action === 'retention') {
+    return (
+      <main>
+        <div className="section-label">
+          <i className="fas fa-file-pdf"></i> Certificados de Retención
+        </div>
+        <RetentionCertificateFlow onBack={() => handleSetAction(null)} />
+      </main>
+    );
+  }
+
   return (
     <main>
       <div className="section-label">
@@ -75,7 +99,7 @@ export function Impuestos() {
           <p>Realiza el pago de tus impuestos con débito directo desde tu banco de forma segura.</p>
         </button>
 
-        <button className="action-card" onClick={() => alert('Calendario Tributario 2026: (Simulado)')}>
+        <button className="action-card" onClick={() => handleSetAction('calendar')}>
           <div className="action-icon" style={{ background: '#e6f7ff', color: '#0066cc' }}><i className="fas fa-calendar-alt"></i></div>
           <div className="tooltip-badge">
             <Tooltip text="Revisa las fechas límite y plazos que tienes para declarar según los últimos números de tu NIT." />
@@ -84,7 +108,7 @@ export function Impuestos() {
           <p>Vencimientos y fechas límite organizadas para evitar sanciones.</p>
         </button>
 
-        <button className="action-card" onClick={() => alert('Descargando Certificados de Retención históricos... (Simulado)')}>
+        <button className="action-card" onClick={() => handleSetAction('retention')}>
           <div className="action-icon" style={{ background: '#f5f0ff', color: '#6600cc' }}><i className="fas fa-file-pdf"></i></div>
           <div className="tooltip-badge">
             <Tooltip text="Obtén soportes históricos de retenciones en la fuente aplicadas." />

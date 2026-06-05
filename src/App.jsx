@@ -12,6 +12,7 @@ import { Tramites } from './pages/Tramites';
 import { FacturaElectronica } from './pages/FacturaElectronica';
 import { RUT } from './pages/RUT';
 import { Contactanos } from './pages/Contactanos';
+import { GrandesContribuyentes } from './pages/GrandesContribuyentes';
 
 import './index.css';
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/factura-electronica" element={<FacturaElectronica />} />
           <Route path="/rut" element={<RUT />} />
           <Route path="/contactanos" element={<Contactanos />} />
+          <Route path="/grandes-contribuyentes" element={<GrandesContribuyentes />} />
         </Routes>
       </div>
 

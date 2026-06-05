@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { CargoTrackingFlow } from '../components/CargoTrackingFlow';
 import { ExportDeclarationFlow } from '../components/ExportDeclarationFlow';
+import { ImportDeclarationFlow } from '../components/ImportDeclarationFlow';
+import { TariffSearchFlow } from '../components/TariffSearchFlow';
 import { Tooltip } from '../components/Form/Tooltip';
 
 export function Aduanas() {
@@ -43,6 +45,28 @@ export function Aduanas() {
     );
   }
 
+  if (action === 'import') {
+    return (
+      <main>
+        <div className="section-label">
+          <i className="fas fa-file-import"></i> Declaración de Importación
+        </div>
+        <ImportDeclarationFlow onBack={() => handleSetAction(null)} />
+      </main>
+    );
+  }
+
+  if (action === 'tariff') {
+    return (
+      <main>
+        <div className="section-label">
+          <i className="fas fa-scale-balanced"></i> Arancel de Aduanas
+        </div>
+        <TariffSearchFlow onBack={() => handleSetAction(null)} />
+      </main>
+    );
+  }
+
   return (
     <main>
       <div className="section-label">
@@ -75,7 +99,7 @@ export function Aduanas() {
           <p>Diligencia el formulario de Solicitud de Embarque (SAE) en minutos de forma guiada.</p>
         </button>
 
-        <button className="action-card" onClick={() => alert('Para declarar importaciones, usa el buscador arancelario o consulta los canales de asistencia tributaria. (Simulado)')}>
+        <button className="action-card" onClick={() => handleSetAction('import')}>
           <div className="action-icon" style={{ background: '#e6f7ff', color: '#0066cc' }}><i className="fas fa-file-import"></i></div>
           <div className="tooltip-badge">
             <Tooltip text="Liquidación y pagos asociados a la introducción de mercancías extranjeras al país." />
@@ -84,7 +108,7 @@ export function Aduanas() {
           <p>Liquidación sugerida de impuestos y aranceles por compras internacionales.</p>
         </button>
 
-        <button className="action-card" onClick={() => alert('Buscador de Arancel de Aduanas: (Simulado)')}>
+        <button className="action-card" onClick={() => handleSetAction('tariff')}>
           <div className="action-icon" style={{ background: '#fff8e6', color: '#cc7700' }}><i className="fas fa-scale-balanced"></i></div>
           <div className="tooltip-badge">
             <Tooltip text="Busca las categorías de productos y conoce qué porcentajes de impuestos aplican para cada una." />

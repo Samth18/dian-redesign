@@ -108,7 +108,7 @@ export function Home() {
             <p>Confirme si un correo es oficial DIAN.</p>
           </button>
           
-          <button className="action-card" onClick={() => alert('Sección exclusiva para Grandes Contribuyentes tributarios (Empresas de gran patrimonio del Estado).')}>
+          <button className="action-card" onClick={() => navigate('/grandes-contribuyentes')}>
             <div className="action-icon" style={{ background: '#fff5e6', color: '#cc5500' }}><i className="fas fa-landmark"></i></div>
             <div className="tooltip-badge">
               <Tooltip text="Portal de transacciones exclusivo para personas jurídicas catalogadas de gran envergadura fiscal." />
